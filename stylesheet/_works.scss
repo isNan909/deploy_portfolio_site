@@ -1,0 +1,84 @@
+//local mixin
+
+@mixin absoluteElement {
+  position: absolute;
+  left: 0rem;
+  right: 0rem;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 1.87rem;
+  padding-left: 1.87rem;
+  justify-content: flex-end;
+  display: flex;
+  top: 0rem;
+  bottom: 0rem;
+  background-color: #00000069;
+  color: $white;
+}
+
+.works {
+  position: relative;
+  margin-top: 7.5rem;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30% auto 30%;
+    gap: 3.75rem 3.75rem;
+    grid-template-areas:
+      'work__grid-one works__grid-three'
+      'works_grid-two works__grid-three'
+      'works_grid-two works__grid-four';
+    grid-gap: 3.75rem;
+    img {
+      position: relative;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1);
+    }
+    h3 {
+      font-size: $font-xlg;
+      font-weight: 500;
+      margin-top: 1.25rem;
+    }
+  }
+  &__heading {
+    position: absolute;
+    left: 11.75rem;
+    top: 1.2rem;
+    font-size: $font-xs;
+    color: $templateGrey;
+    text-transform: uppercase;
+    transform-origin: center;
+    transform: translate(50%, 50%) rotate(-90deg);
+    letter-spacing: 0.1875rem;
+  }
+  .grid-overlay {
+    @include absoluteElement;
+    > div {
+      max-width: 19.81rem;
+    }
+    span {
+      background-color: $templateYellow;
+      color: $darkBlack;
+      border-radius: 0.31rem;
+      padding: 0.12rem 0.62rem;
+      font-size: $font-xs;
+    }
+  }
+  &__grid-one {
+    grid-area: work__grid-one;
+    position: relative;
+  }
+  &__grid-two {
+    grid-area: works_grid-two;
+    position: relative;
+  }
+  &__grid-three {
+    grid-area: works__grid-three;
+    position: relative;
+  }
+  &__grid-four {
+    grid-area: works__grid-four;
+    position: relative;
+  }
+}

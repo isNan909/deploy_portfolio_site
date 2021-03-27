@@ -35,6 +35,10 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  width: 100%;
+}
+
 // Set core body defaults
 body {
   min-height: 100vh;
@@ -110,5 +114,22 @@ button,
 .hide-for-desktop {
   @include breakpoint-up(large) {
     display: none;
+  }
+}
+
+// background lines
+.lines {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;
+  width: 68.75rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  div {
+    border: 1px solid #f6f6f6;
   }
 }

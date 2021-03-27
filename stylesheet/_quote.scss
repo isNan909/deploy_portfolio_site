@@ -1,0 +1,22 @@
+.quote {
+  margin-top: 7.37rem;
+  &__text {
+    max-width: 34.375rem;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: capitalize;
+    h1 {
+      font-weight: 600;
+    }
+    span {
+      color: $templateBlue;
+    }
+    ul {
+      display: inline-flex;
+      margin-top: 3.125rem;
+    }
+    ul li {
+      margin-right: 1.87rem;
+    }
+  }
+}

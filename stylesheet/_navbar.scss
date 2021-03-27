@@ -1,13 +1,14 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  margin-top: 6.25rem;
+  padding-top: 6.25rem;
   &__left {
     ul {
       display: flex;
       li a {
         text-transform: uppercase;
         padding-right: 4.375rem;
+        letter-spacing: 0.187rem;
       }
     }
   }
@@ -31,5 +32,6 @@
     font-size: $font-xs;
     font-weight: 600;
     color: $templateBlue;
+    letter-spacing: 0.187rem;
   }
 }
