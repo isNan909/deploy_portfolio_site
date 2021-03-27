@@ -1,0 +1,56 @@
+section.about {
+  position: relative;
+  margin-top: 7.5rem;
+  .about {
+    &__heading {
+      position: absolute;
+      left: 11.75rem;
+      top: 1.2rem;
+      font-size: $font-xs;
+      color: $templateGrey;
+      text-transform: uppercase;
+      transform-origin: center;
+      transform: translate(50%, 50%) rotate(-90deg);
+      letter-spacing: 0.1875rem;
+    }
+    &__logo {
+      margin-top: 3.75rem;
+      ul {
+        display: flex;
+      }
+      ul li {
+        margin-right: 7.5rem;
+      }
+    }
+    &__grid {
+      display: grid;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 3.75rem 4rem;
+      grid-template-areas:
+        'about__grid-one about__grid-three'
+        'about__grid-two about__grid-four';
+      h3 {
+        font-size: $font-xlg;
+        font-weight: 500;
+        margin-bottom: 1.875rem;
+      }
+      p {
+        line-height: 1.875rem;
+      }
+    }
+  }
+  &__grid-one {
+    grid-area: about__grid-one;
+  }
+  &__grid-two {
+    grid-area: about__grid-two;
+  }
+  &__grid-three {
+    grid-area: about__grid-three;
+  }
+  &__grid-four {
+    grid-area: about__grid-four;
+  }
+}

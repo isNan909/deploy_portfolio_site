@@ -1,0 +1,22 @@
+footer {
+    padding-bottom: 7.5rem;
+    background-color: $white;
+  .footer {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      .footer__wrapper-left {
+        font-size: $font-pa;
+      }
+      .footer__wrapper-right {
+        ul {
+          display: flex;
+        }
+        ul li {
+          padding-left: 3.75rem;
+          color: $templateGrey;
+        }
+      }
+    }
+  }
+}

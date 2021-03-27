@@ -1,0 +1,47 @@
+section.sharelink {
+  position: relative;
+  margin-top: 7.5rem;
+  .sharelink {
+    &__heading {
+      position: absolute;
+      left: 11.75rem;
+      top: 1.2rem;
+      font-size: $font-xs;
+      color: $templateGrey;
+      text-transform: uppercase;
+      transform-origin: center;
+      transform: translate(50%, 50%) rotate(-90deg);
+      letter-spacing: 0.1875rem;
+    }
+    &__grid {
+      display: grid;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 3.75rem 4rem;
+      grid-template-areas:
+        'sharelink__grid-left sharelink__grid-right'
+        'sharelink__grid-left sharelink__grid-right';
+      a {
+        color: $templateBlue;
+      }
+      span {
+        color: $templateGrey;
+      }
+      .sharelink__grid-left {
+        div {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1.875rem;
+        }
+      }
+      .sharelink__grid-right {
+        div {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1.875rem;
+        }
+      }
+    }
+  }
+}
