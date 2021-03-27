@@ -41,5 +41,74 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   overflow-x: hidden;
-  font-family: 'Nunito','Helvetica', Arial, sans-serif;
+  font-family: 'Nunito', 'Helvetica', Arial, sans-serif;
+}
+
+.container {
+  max-width: 68.75rem;
+  margin: 0 auto;
+}
+
+// Set typography
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a,
+button {
+  font-family: 'Nunito', 'Helvetica', Arial, sans-serif;
+}
+
+h1 {
+  font-size: $font-xxlg;
+  margin-bottom: 0rem;
+
+  @include breakpoint-down(large) {
+    font-size: $font-xlg;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+// Flexbox layout
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+button,
+.button {
+  position: relative;
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
 }

@@ -1,15 +1,15 @@
-// breakpoint defination 640px, 1024px, 1400px
+// breakpoint defination 640px, 1024px, 1100px
 $breakpoints-up: (
   'medium': '40em',
   'large': '64em',
-  'xlarge': '87.5em',
+  'xlarge': '68.75rem',
 );
 
-// breakpoint defination 639px, 1023px, 1399px
+// breakpoint defination 639px, 1023px, 1096
 $breakpoints-down: (
   'small': '39.9375em',
   'medium': '63.9375em',
-  'large': '87.4375em',
+  'large': '68.5rem',
 );
 
 @mixin breakpoint-up($size) {

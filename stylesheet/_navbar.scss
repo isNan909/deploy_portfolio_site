@@ -1,0 +1,35 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6.25rem;
+  &__left {
+    ul {
+      display: flex;
+      li a {
+        text-transform: uppercase;
+        padding-right: 4.375rem;
+      }
+    }
+  }
+  &__center {
+    &-img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+    }
+  }
+  &__right {
+    ul {
+      display: flex;
+      li a {
+        text-transform: uppercase;
+        padding-left: 4.375rem;
+      }
+    }
+  }
+  ul li a {
+    font-size: $font-xs;
+    font-weight: 600;
+    color: $templateBlue;
+  }
+}
