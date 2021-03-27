@@ -20,22 +20,22 @@ section.sharelink {
       grid-template-rows: 1fr;
       gap: 3.75rem 4rem;
       grid-template-areas:
-        'sharelink__grid-left sharelink__grid-right'
-        'sharelink__grid-left sharelink__grid-right';
+        'sharelink__grid__left sharelink__grid__right'
+        'sharelink__grid__left sharelink__grid__right';
       a {
         color: $templateBlue;
       }
       span {
         color: $templateGrey;
       }
-      .sharelink__grid-left {
+      .sharelink__grid__left {
         div {
           display: flex;
           justify-content: space-between;
           margin-bottom: 1.875rem;
         }
       }
-      .sharelink__grid-right {
+      .sharelink__grid__right {
         div {
           display: flex;
           justify-content: space-between;

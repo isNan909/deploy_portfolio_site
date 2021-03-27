@@ -5,10 +5,10 @@ footer {
     &__wrapper {
       display: flex;
       justify-content: space-between;
-      .footer__wrapper-left {
+      .footer__wrapper__left {
         font-size: $font-pa;
       }
-      .footer__wrapper-right {
+      .footer__wrapper__right {
         ul {
           display: flex;
         }

@@ -65,19 +65,19 @@
       font-size: $font-xs;
     }
   }
-  &__grid-one {
+  &__grid__one {
     grid-area: work__grid-one;
     position: relative;
   }
-  &__grid-two {
+  &__grid__two {
     grid-area: works_grid-two;
     position: relative;
   }
-  &__grid-three {
+  &__grid__three {
     grid-area: works__grid-three;
     position: relative;
   }
-  &__grid-four {
+  &__grid__four {
     grid-area: works__grid-four;
     position: relative;
   }

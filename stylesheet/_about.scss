@@ -29,8 +29,8 @@ section.about {
       grid-template-rows: 1fr 1fr;
       gap: 3.75rem 4rem;
       grid-template-areas:
-        'about__grid-one about__grid-three'
-        'about__grid-two about__grid-four';
+        'about__grid__one about__grid__three'
+        'about__grid__two about__grid__four';
       h3 {
         font-size: $font-xlg;
         font-weight: 500;
@@ -41,16 +41,16 @@ section.about {
       }
     }
   }
-  &__grid-one {
-    grid-area: about__grid-one;
+  &__grid__one {
+    grid-area: about__grid__one;
   }
-  &__grid-two {
-    grid-area: about__grid-two;
+  &__grid__two {
+    grid-area: about__grid__two;
   }
-  &__grid-three {
-    grid-area: about__grid-three;
+  &__grid__three {
+    grid-area: about__grid__three;
   }
-  &__grid-four {
-    grid-area: about__grid-four;
+  &__grid__four {
+    grid-area: about__grid__four;
   }
 }
