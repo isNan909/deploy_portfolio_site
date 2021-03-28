@@ -709,11 +709,42 @@ section.contact .contact__grid .contact__grid__right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding-top: 3.75rem;
+}
+
+section.contact .contact__grid .contact__grid__right div:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 1.87rem;
+}
+
+@media (max-width: 39.9375em) {
+  section.contact .contact__grid .contact__grid__right div:first-child {
+    width: 100%;
+  }
+}
+
+section.contact .contact__grid .contact__grid__right div button {
+  background-color: #CFCFCF;
+  padding: 1.18rem;
+  border: 0px;
+  border-radius: 50%;
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+section.contact .contact__grid .contact__grid__right div button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+section.contact .contact__grid .contact__grid__right div button:hover {
+  background-color: #007fff;
+  cursor: pointer;
 }
 
 section.contact .contact__grid .contact__grid__right form {
@@ -768,7 +799,7 @@ section.contact .contact__grid .contact__grid__right form textarea::placeholder 
 section.contact .contact__grid .contact__grid__right form input:focus,
 section.contact .contact__grid .contact__grid__right form textarea:focus {
   border: 0px;
-  border-bottom: 2px solid #007fff;
+  border-bottom: 2px solid #000;
   outline: none;
 }
 
@@ -780,12 +811,17 @@ section.contact .contact__grid .contact__grid__right form textarea {
   height: 8.75rem;
 }
 
+section.contact .contact__grid .contact__grid__right form > button {
+  display: none;
+}
+
 @media (max-width: 39.9375em) {
   section.contact .contact__grid .contact__grid__right {
     width: 100%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
