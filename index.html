@@ -234,12 +234,13 @@
             </div>
             <div class="contact__grid__right">
               <div>
-                <form>
+                <form name="contact" method="POST" netlify>
                   <label for="name">Name</label>
                   <input
                     type="text"
                     id="fname"
-                    name="fname"
+                    required
+                    name="name"
                     value=""
                     placeholder="Incognito"
                   />
@@ -247,6 +248,8 @@
                   <label for="text-input">email</label>
                   <input
                     class="input"
+                    name="email"
+                    required
                     id="email"
                     type="text"
                     placeholder="Incognito@gmail.com"
@@ -256,6 +259,8 @@
                   <textarea
                     class="input"
                     id="textarea"
+                    name="description"
+                    required
                     placeholder="Your question or sugesstion"
                   ></textarea>
                   <button id="submitForm" type="submit">submit contact</button>

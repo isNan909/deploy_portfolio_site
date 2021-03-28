@@ -8,4 +8,7 @@ window.onload = (_e) => {
   closeMenu.onclick = function () {
     overlayDiv.classList.remove('show');
   };
+  document.getElementById('callSubmission').onclick = function () {
+    document.getElementById('submitForm').click();
+  };
 };
