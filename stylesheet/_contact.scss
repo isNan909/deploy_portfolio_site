@@ -37,6 +37,11 @@ section.contact {
               color: $templateLightGrey;
               font-size: $font-pa;
             }
+            &:focus {
+              border: 0px;
+              border-bottom: 2px solid $templateBlue;
+              outline: none;
+            }
           }
           input {
             height: 2.8125rem;

@@ -765,6 +765,13 @@ section.contact .contact__grid .contact__grid__right form textarea::placeholder 
   font-size: 1rem;
 }
 
+section.contact .contact__grid .contact__grid__right form input:focus,
+section.contact .contact__grid .contact__grid__right form textarea:focus {
+  border: 0px;
+  border-bottom: 2px solid #007fff;
+  outline: none;
+}
+
 section.contact .contact__grid .contact__grid__right form input {
   height: 2.8125rem;
 }
