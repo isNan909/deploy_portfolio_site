@@ -35,6 +35,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  @include breakpoint-down(small) {
+    position: relative;
+  }
+}
+
 img {
   width: 100%;
 }
@@ -51,6 +57,10 @@ body {
 .container {
   max-width: 68.75rem;
   margin: 0 auto;
+  @include breakpoint-down(medium) {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
 }
 
 // Set typography
@@ -78,6 +88,13 @@ h1 {
   }
 }
 
+h3 {
+  font-size: $font-xlg;
+
+  @include breakpoint-down(medium) {
+    font-size: $font-med;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -132,4 +149,52 @@ button,
   div {
     border: 1px solid #f6f6f6;
   }
+  @include breakpoint-down(medium) {
+    width: 57.9rem;
+  }
+  @include breakpoint-down(small) {
+    width: 28.9rem;
+  }
+}
+
+// mobile menu
+.overlaymenu {
+  display: none;
+  transition: all 0.5s ease-in-out;
+  div,
+  span {
+    margin-top: 8rem;
+  }
+  span {
+    padding-left: 1.5rem;
+    top: -5rem;
+    position: absolute;
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  div ul li {
+    transition: all 0.5s ease-in-out;
+    display: block;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+    a {
+      color: $white;
+    }
+  }
+}
+
+.overlaymenu.show {
+  display: block;
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  z-index: 1;
+  right: 0rem;
+  background-color: $templateBlue;
+  transition: all 0.5s ease-in-out;
 }

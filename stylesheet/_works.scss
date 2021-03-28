@@ -6,8 +6,7 @@
   right: 0rem;
   flex-direction: column;
   align-items: flex-start;
-  padding-bottom: 1.87rem;
-  padding-left: 1.87rem;
+  padding: 1.87rem;
   justify-content: flex-end;
   display: flex;
   top: 0rem;
@@ -17,7 +16,6 @@
 }
 
 .works {
-  position: relative;
   margin-top: 7.5rem;
   &__grid {
     display: grid;
@@ -29,6 +27,7 @@
       'works_grid-two works__grid-three'
       'works_grid-two works__grid-four';
     grid-gap: 3.75rem;
+    position: relative;
     img {
       position: relative;
       height: 100%;
@@ -36,14 +35,18 @@
       filter: grayscale(1);
     }
     h3 {
-      font-size: $font-xlg;
       font-weight: 500;
       margin-top: 1.25rem;
+    }
+    @include breakpoint-down(small) {
+      gap: 3.75rem 3.75rem;
+      display: flex;
+      flex-wrap: wrap;
     }
   }
   &__heading {
     position: absolute;
-    left: 11.75rem;
+    left: -7rem;
     top: 1.2rem;
     font-size: $font-xs;
     color: $templateGrey;
@@ -51,6 +54,12 @@
     transform-origin: center;
     transform: translate(50%, 50%) rotate(-90deg);
     letter-spacing: 0.1875rem;
+    @include breakpoint-down(medium) {
+      position: absolute;
+      left: 0rem;
+      top: -3rem;
+      transform: translate(0%, 0%) rotate(0deg);
+    }
   }
   .grid-overlay {
     @include absoluteElement;
@@ -63,6 +72,7 @@
       border-radius: 0.31rem;
       padding: 0.12rem 0.62rem;
       font-size: $font-xs;
+      font-weight: 600;
     }
   }
   &__grid__one {

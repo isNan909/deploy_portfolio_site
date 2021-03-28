@@ -10,6 +10,19 @@
         padding-right: 4.375rem;
         letter-spacing: 0.187rem;
       }
+      @include breakpoint-down(small) {
+        display: none;
+      }
+    }
+    span {
+      display: none;
+      @include breakpoint-down(small) {
+        display: block;
+      }
+      img {
+        width: 1.875rem;
+        height: 1.875rem;
+      }
     }
   }
   &__center {
@@ -17,6 +30,14 @@
       width: 3.25rem;
       height: 3.25rem;
       border-radius: 50%;
+      @include breakpoint-down(small) {
+        margin: auto;
+      }
+    }
+    @include breakpoint-down(small) {
+      justify-content: center;
+      flex: 1;
+      display: flex;
     }
   }
   &__right {
@@ -26,6 +47,9 @@
         text-transform: uppercase;
         padding-left: 4.375rem;
       }
+    }
+    @include breakpoint-down(small) {
+      display: none;
     }
   }
   ul li a {

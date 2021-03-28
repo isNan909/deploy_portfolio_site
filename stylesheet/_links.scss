@@ -1,10 +1,9 @@
 section.sharelink {
-  position: relative;
   margin-top: 7.5rem;
   .sharelink {
     &__heading {
       position: absolute;
-      left: 11.75rem;
+      left: -7rem;
       top: 1.2rem;
       font-size: $font-xs;
       color: $templateGrey;
@@ -12,6 +11,12 @@ section.sharelink {
       transform-origin: center;
       transform: translate(50%, 50%) rotate(-90deg);
       letter-spacing: 0.1875rem;
+      @include breakpoint-down(medium) {
+        position: absolute;
+        left: 0rem;
+        top: -3rem;
+        transform: translate(0%, 0%) rotate(0deg);
+      }
     }
     &__grid {
       display: grid;
@@ -22,11 +27,15 @@ section.sharelink {
       grid-template-areas:
         'sharelink__grid__left sharelink__grid__right'
         'sharelink__grid__left sharelink__grid__right';
+      position: relative;
       a {
         color: $templateBlue;
       }
       span {
         color: $templateGrey;
+        @include breakpoint-down(small) {
+          padding-left: 0.5rem;
+        }
       }
       .sharelink__grid__left {
         div {
@@ -41,6 +50,11 @@ section.sharelink {
           justify-content: space-between;
           margin-bottom: 1.875rem;
         }
+      }
+      @include breakpoint-down(small) {
+        gap: 0rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
       }
     }
   }

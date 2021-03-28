@@ -1,10 +1,9 @@
 section.about {
-  position: relative;
   margin-top: 7.5rem;
   .about {
     &__heading {
       position: absolute;
-      left: 11.75rem;
+      left: -7rem;
       top: 1.2rem;
       font-size: $font-xs;
       color: $templateGrey;
@@ -12,6 +11,12 @@ section.about {
       transform-origin: center;
       transform: translate(50%, 50%) rotate(-90deg);
       letter-spacing: 0.1875rem;
+      @include breakpoint-down(medium) {
+        position: absolute;
+        left: 0rem;
+        top: -3rem;
+        transform: translate(0%, 0%) rotate(0deg);
+      }
     }
     &__logo {
       margin-top: 3.75rem;
@@ -20,6 +25,9 @@ section.about {
       }
       ul li {
         margin-right: 7.5rem;
+        @include breakpoint-down(small) {
+          margin-right: 2.44rem;
+        }
       }
     }
     &__grid {
@@ -31,6 +39,7 @@ section.about {
       grid-template-areas:
         'about__grid__one about__grid__three'
         'about__grid__two about__grid__four';
+      position: relative;
       h3 {
         font-size: $font-xlg;
         font-weight: 500;
@@ -38,6 +47,11 @@ section.about {
       }
       p {
         line-height: 1.875rem;
+      }
+      @include breakpoint-down(small) {
+        gap: 1.87rem 1.87rem;
+        display: flex;
+        flex-wrap: wrap;
       }
     }
   }

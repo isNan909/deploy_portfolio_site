@@ -2,6 +2,9 @@ section.contact {
   background-color: $white;
   padding: 7.5rem 0rem;
   border-top: 1px solid #ececec;
+  @include breakpoint-down(small) {
+    padding: 3.75rem 0rem;
+  }
   .contact {
     &__grid {
       display: grid;
@@ -28,10 +31,23 @@ section.contact {
           input,
           textarea {
             margin-bottom: 1.875rem;
-            height: 2.8125rem;
             border: none;
             border-bottom: 1px solid #b9b9b9;
+            &::placeholder {
+              color: $templateLightGrey;
+              font-size: $font-pa;
+            }
           }
+          input {
+            height: 2.8125rem;
+          }
+          textarea {
+            height: 8.75rem;
+          }
+        }
+        @include breakpoint-down(small) {
+          width: 100%;
+          flex: 1;
         }
       }
       .contact__grid__left {
@@ -51,6 +67,12 @@ section.contact {
         ul li {
           margin-right: 1.87rem;
         }
+      }
+      @include breakpoint-down(small) {
+        gap: 0rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 3.75rem;
       }
     }
   }

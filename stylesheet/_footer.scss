@@ -1,6 +1,6 @@
 footer {
-    padding-bottom: 7.5rem;
-    background-color: $white;
+  padding-bottom: 7.5rem;
+  background-color: $white;
   .footer {
     &__wrapper {
       display: flex;
@@ -11,12 +11,30 @@ footer {
       .footer__wrapper__right {
         ul {
           display: flex;
+          @include breakpoint-down(small) {
+            flex-wrap: wrap;
+            flex-direction: column;
+          }
         }
         ul li {
           padding-left: 3.75rem;
           color: $templateGrey;
+          @include breakpoint-down(small) {
+            padding-left: 0rem;
+            display: block;
+            margin-top: 0.62rem;
+          }
+        }
+        @include breakpoint-down(small) {
+          flex-wrap: wrap;
         }
       }
+      @include breakpoint-down(small) {
+        flex-wrap: wrap;
+      }
     }
+  }
+  @include breakpoint-down(small) {
+    padding-bottom: 3.75rem;
   }
 }
