@@ -31,12 +31,6 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 39.9375em) {
-  body {
-    position: relative;
-  }
-}
-
 img {
   width: 100%;
 }
@@ -58,6 +52,12 @@ body {
   .container {
     padding-left: 1.875rem;
     padding-right: 1.875rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  body {
+    position: relative;
   }
 }
 
@@ -98,30 +98,6 @@ h3 {
 
 a {
   text-decoration: none;
-}
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.flex-jc-sb {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.flex-jc-c {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.flex-ai-c {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 button,
